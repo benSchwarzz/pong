@@ -1,6 +1,5 @@
 import pygame as pg
 import random
-import math as m
 
 screen = pg.display.set_mode((800, 700))
 WHITE = (255, 255, 255)
@@ -44,7 +43,6 @@ def get_input(user):
             direction = "down"
     else:
         direction = "stopped"
-        
     return direction
 
 ########### Main Game Loop 
@@ -64,7 +62,6 @@ def main():
         player_rect = pg.Rect(player.x, player.y, player.width, player.height)
 
         vel_change_rate = random.randint(-2, 2)
-
 
         ###
         if ball.y < 0:
@@ -91,7 +88,6 @@ def main():
             player.y += 6
         elif direction == "stopped":
             player.y += 0
-
 
         for event in pg.event.get():
             if event.type == pg.QUIT:
