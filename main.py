@@ -22,7 +22,7 @@ class Paddle:
     def draw_paddle(self):
         pg.draw.rect(screen, WHITE, (self.x, self.y, self.width, self.height))
 
-class Ball:
+class Ball: 
     def __init__(self, x, y, width):
         self.x = x
         self.y = y
@@ -47,7 +47,7 @@ def get_input(user):
         
     return direction
 
-
+########### Main Game Loop 
 
 def main():
     player = Paddle(35, 365, 10, 70)
